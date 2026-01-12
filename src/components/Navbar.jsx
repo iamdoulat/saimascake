@@ -21,13 +21,16 @@ export default function Navbar() {
                     <a href="#contact" className="hover:text-brand-green transition-colors">যোগাযোগ</a>
                 </div>
 
-                <motion.button
+                <motion.a
+                    href="https://wa.me/8801815186079"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-brand-green text-white px-6 py-2 rounded-full font-semibold shadow-lg shadow-brand-green/30"
                 >
                     অর্ডার করুন
-                </motion.button>
+                </motion.a>
             </div>
         </nav>
     );

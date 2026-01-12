@@ -21,16 +21,18 @@ export default function Gallery() {
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                     >
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient-multi">আমাদের পছন্দের কেকসমূহ</h2>
-                        <p className="text-foreground/70 max-w-md mx-auto md:mx-0">প্রতিটি কেক একটি শিল্পকর্ম, যা আপনার বিশেষ দিনে রং ছড়াবে।</p>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gradient-multi">আমাদের পছন্দের কেকসমূহ</h2>
+                        <p className="text-foreground/70 max-w-md mx-auto md:mx-0 font-medium italic">প্রতিটি কেক একটি শিল্পকর্ম, যা আপনার বিশেষ দিনে রং ছড়াবে।</p>
                     </motion.div>
 
-                    <motion.button
+                    <motion.a
+                        href="https://www.facebook.com/saimascake/photos"
+                        target="_blank"
                         whileHover={{ x: 10 }}
-                        className="text-brand-warm font-bold flex items-center gap-2"
+                        className="text-brand-green font-bold flex items-center gap-2 text-lg"
                     >
                         ফেসবুক গ্যালারি দেখুন <span>→</span>
-                    </motion.button>
+                    </motion.a>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-6">

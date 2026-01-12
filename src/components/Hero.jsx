@@ -38,23 +38,22 @@ export default function Hero() {
     };
 
     return (
-        <section id="hero" className="relative min-h-[90vh] pt-32 pb-20 overflow-hidden bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.1),transparent),radial-gradient(circle_at_bottom_left,rgba(244,114,182,0.1),transparent)]">
-            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-wood.png')] opacity-10 pointer-events-none"></div>
+        <section id="hero" className="relative min-h-screen pt-32 pb-20 overflow-hidden bg-[radial-gradient(circle_at_top_right,var(--soft-pink),transparent)]">
             <div className="max-w-7xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center">
 
                 <motion.div
                     variants={container}
                     initial="hidden"
                     animate="visible"
-                    className="text-center md:text-left"
+                    className="text-center md:text-left overflow-visible"
                 >
-                    <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-                        <motion.div variants={container} initial="hidden" animate="visible" className="flex flex-wrap justify-center md:justify-start gap-x-2 md:gap-x-4">
+                    <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 overflow-visible">
+                        <motion.div variants={container} initial="hidden" animate="visible" className="flex flex-wrap justify-center md:justify-start gap-x-4 md:gap-x-8 overflow-visible">
                             {words.map((word, index) => (
                                 <motion.span
                                     variants={child}
                                     key={index}
-                                    className="italic text-gradient-multi"
+                                    className="italic text-gradient-multi py-2"
                                 >
                                     {word}
                                 </motion.span>

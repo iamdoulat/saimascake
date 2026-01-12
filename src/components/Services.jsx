@@ -31,7 +31,7 @@ export default function Services() {
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    className="text-3xl md:text-4xl font-bold mb-12 text-gradient-multi inline-block"
+                    className="text-3xl md:text-5xl font-bold mb-12 text-gradient-multi inline-block"
                 >
                     আমাদের বিশেষত্ব
                 </motion.h2>
@@ -43,13 +43,13 @@ export default function Services() {
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: i * 0.2 }}
-                            className="p-8 glass rounded-3xl hover:shadow-2xl transition-all duration-500 group"
+                            className="p-8 glass rounded-3xl hover:shadow-2xl transition-all duration-500 group border border-brand-pink/20 hover:border-brand-green/30"
                         >
-                            <div className={`w-16 h-16 ${s.color} text-white rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform`}>
+                            <div className={`w-16 h-16 bg-brand-green text-white rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 rotate-3 group-hover:rotate-0 transition-all`}>
                                 <s.icon size={32} />
                             </div>
                             <h3 className="text-2xl font-bold mb-4">{s.title}</h3>
-                            <p className="text-foreground/70 leading-relaxed">{s.desc}</p>
+                            <p className="text-foreground/70 leading-relaxed font-medium">{s.desc}</p>
                         </motion.div>
                     ))}
                 </div>

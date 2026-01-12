@@ -1,24 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #1a0f0e;
-  /* Deep Dark Chocolate */
-  --foreground: #fffdfa;
+  --background: #fffdfa;
   /* Soft Cream */
+  --foreground: #2d1810;
+  /* Deep Chocolate */
 
   /* Brand Colors */
-  --soft-pink: #2d1b19;
-  /* Darker Pinkish Chocolate */
-  --warm-pink: #f472b6;
-  /* Vibrant Pink */
-  --gold: #fbbf24;
-  /* Brighter Gold */
-  --accent: #064e3b;
-  /* Dark Forest Green */
+  --soft-pink: #fce4ec;
+  --warm-pink: #f06292;
+  --gold: #d4af37;
+  --accent: #f8bbd0;
   --brand-green: #10b981;
   /* Primary Green */
-  --logo-deep: #fffdfa;
-  /* White Logo on Dark */
+  --logo-deep: #880e4f;
+  /* Deep Magenta */
 }
 
 @theme inline {
@@ -35,16 +31,16 @@
 }
 
 @utility text-gradient-multi {
-  background: linear-gradient(to right, #f472b6, #10b981, #fbbf24, #f472b6);
+  background: linear-gradient(to right, #f06292, #10b981, #d4af37, #f06292);
   background-size: 300% auto;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shine 5s linear infinite;
   display: inline-block;
-  padding-right: 0.1em;
-  /* Fix for italic clipping */
-  margin-right: -0.1em;
+  padding-inline: 0.15em;
+  padding-block: 0.1em;
+  margin-inline: -0.15em;
 }
 
 @keyframes shine {
@@ -57,11 +53,10 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-bn);
-  min-height: 100vh;
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }

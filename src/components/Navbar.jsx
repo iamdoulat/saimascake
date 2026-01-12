@@ -9,16 +9,16 @@ export default function Navbar() {
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    className="text-2xl md:text-3xl font-extrabold italic drop-shadow-sm text-gradient-multi"
+                    className="text-2xl md:text-3xl font-extrabold italic drop-shadow-sm text-gradient-multi overflow-visible"
                 >
                     সাইমাস বেকড হোম
                 </motion.div>
 
-                <div className="hidden md:flex space-x-8 text-foreground/80 font-medium">
-                    <a href="#hero" className="hover:text-brand-warm transition-colors">হোম</a>
-                    <a href="#services" className="hover:text-brand-warm transition-colors">সেবা</a>
-                    <a href="#gallery" className="hover:text-brand-warm transition-colors">গ্যালারি</a>
-                    <a href="#contact" className="hover:text-brand-warm transition-colors">যোগাযোগ</a>
+                <div className="hidden md:flex space-x-8 text-foreground/80 font-bold">
+                    <a href="#hero" className="hover:text-brand-green transition-colors">হোম</a>
+                    <a href="#services" className="hover:text-brand-green transition-colors">সেবা</a>
+                    <a href="#gallery" className="hover:text-brand-green transition-colors">গ্যালারি</a>
+                    <a href="#contact" className="hover:text-brand-green transition-colors">যোগাযোগ</a>
                 </div>
 
                 <motion.button

@@ -19,9 +19,9 @@ export default function Footer() {
                 </div>
 
                 <div className="flex gap-8 text-foreground/60 font-medium">
-                    <a href="#" className="hover:text-brand-warm">ফেসবুক</a>
-                    <a href="#" className="hover:text-brand-warm">ইনস্টাগ্রাম</a>
-                    <a href="#" className="hover:text-brand-warm">নীতিমালা</a>
+                    <a href="#" className="hover:text-brand-green">ফেসবুক</a>
+                    <a href="#" className="hover:text-brand-green">ইনস্টাগ্রাম</a>
+                    <a href="#" className="hover:text-brand-green">নীতিমালা</a>
                 </div>
 
                 <p className="text-foreground/50 text-sm">ডিজাইন করেছে <span className="font-bold">অ্যান্টিগ্রাভিটি</span></p>

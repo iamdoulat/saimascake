@@ -43,18 +43,18 @@ export default function Contact() {
                         <div className="flex flex-col justify-center">
                             <motion.div
                                 whileHover={{ scale: 1.02 }}
-                                className="bg-white p-8 rounded-3xl shadow-xl shadow-brand-green/5 border border-brand-green/10"
+                                className="bg-white p-8 rounded-3xl shadow-xl shadow-brand-green/5 border border-brand-green/10 transition-all"
                             >
                                 <h3 className="text-2xl font-bold mb-4 text-brand-green">অর্ডার করতে চান?</h3>
-                                <p className="mb-8 text-foreground/60">সরাসরি হোয়াটসঅ্যাপে কথা বলুন এবং আপনার পছন্দ জানিয়ে দিন।</p>
+                                <p className="mb-8 text-foreground/60 font-medium">সরাসরি হোয়াটসঅ্যাপে কথা বলুন এবং আপনার পছন্দ জানিয়ে দিন। আমরা খুব দ্রুত আপনার সাথে যোগাযোগ করব।</p>
 
                                 <a
                                     href="https://wa.me/8801815186079"
                                     target="_blank"
-                                    className="w-full bg-[#25D366] text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-lg shadow-[#25D366]/20 transition-transform active:scale-95"
+                                    className="w-full bg-[#10b981] text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-lg shadow-brand-green/20 transition-all hover:brightness-110 active:scale-95"
                                 >
                                     <MessageCircle size={24} />
-                                    হোয়াটসঅ্যাপ মেসেজ
+                                    হোয়াটসঅ্যাপ মেসেজ দিন
                                 </a>
                             </motion.div>
                         </div>

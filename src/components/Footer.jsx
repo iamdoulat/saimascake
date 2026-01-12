@@ -19,7 +19,7 @@ export default function Footer() {
                 </div>
 
                 <div className="flex gap-8 text-foreground/60 font-medium">
-                    <a href="#" className="hover:text-brand-green">ফেসবুক</a>
+                    <a href="https://www.facebook.com/saimasbakedhome" target="_blank" rel="noopener noreferrer" className="hover:text-brand-green">ফেসবুক</a>
                     <a href="#" className="hover:text-brand-green">ইনস্টাগ্রাম</a>
                     <a href="#" className="hover:text-brand-green">নীতিমালা</a>
                 </div>

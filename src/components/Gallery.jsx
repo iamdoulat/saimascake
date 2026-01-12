@@ -26,8 +26,9 @@ export default function Gallery() {
                     </motion.div>
 
                     <motion.a
-                        href="https://www.facebook.com/saimascake/photos"
+                        href="https://www.facebook.com/saimasbakedhome/photos"
                         target="_blank"
+                        rel="noopener noreferrer"
                         whileHover={{ x: 10 }}
                         className="text-brand-green font-bold flex items-center gap-2 text-lg"
                     >

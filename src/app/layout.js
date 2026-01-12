@@ -22,6 +22,8 @@ export const metadata = {
   description: "ফটিকছড়িতে ঘরোয়া পরিবেশে তৈরি সেরা মানের কেক।",
 };
 
+import { ThemeProvider } from "@/components/ThemeProvider";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="bn" suppressHydrationWarning>
@@ -29,7 +31,14 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} ${hindSiliguri.variable} font-bn antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

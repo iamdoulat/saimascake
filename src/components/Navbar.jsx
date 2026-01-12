@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ThemeToggle } from "./ThemeToggle";
 
 export default function Navbar() {
     return (
@@ -14,23 +15,26 @@ export default function Navbar() {
                     সাইমাস বেকড হোম
                 </motion.div>
 
-                <div className="hidden md:flex space-x-8 text-foreground/80 font-bold">
+                <div className="hidden md:flex space-x-8 text-foreground/80 font-bold items-center">
                     <a href="#hero" className="hover:text-brand-green transition-colors">হোম</a>
                     <a href="#services" className="hover:text-brand-green transition-colors">সেবা</a>
                     <a href="#gallery" className="hover:text-brand-green transition-colors">গ্যালারি</a>
                     <a href="#contact" className="hover:text-brand-green transition-colors">যোগাযোগ</a>
                 </div>
 
-                <motion.a
-                    href="https://wa.me/8801815186079"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-brand-green text-white px-6 py-2 rounded-full font-semibold shadow-lg shadow-brand-green/30"
-                >
-                    অর্ডার করুন
-                </motion.a>
+                <div className="flex items-center gap-3 md:gap-6">
+                    <ThemeToggle />
+                    <motion.a
+                        href="https://wa.me/8801815186079"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="bg-brand-green text-white px-4 md:px-6 py-2 rounded-full font-bold shadow-xl shadow-brand-green/20 border-2 border-white/20 hover:border-white/40 transition-all text-sm md:text-base whitespace-nowrap"
+                    >
+                        অর্ডার করুন
+                    </motion.a>
+                </div>
             </div>
         </nav>
     );

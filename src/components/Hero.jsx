@@ -5,40 +5,93 @@ import Image from 'next/image';
 import heroCake from '@/assets/hero-cake.png';
 
 export default function Hero() {
+    const sentence = "প্রতিটি কামড়ে ভালোবাসার স্বাদ";
+    const words = sentence.split(" ");
+
+    const container = {
+        hidden: { opacity: 0 },
+        visible: (i = 1) => ({
+            opacity: 1,
+            transition: { staggerChildren: 0.12, delayChildren: 0.04 * i },
+        }),
+    };
+
+    const child = {
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                type: "spring",
+                damping: 12,
+                stiffness: 100,
+            },
+        },
+        hidden: {
+            opacity: 0,
+            y: 20,
+            transition: {
+                type: "spring",
+                damping: 12,
+                stiffness: 100,
+            },
+        },
+    };
+
     return (
-        <section id="hero" className="relative min-h-screen pt-32 pb-20 overflow-hidden bg-[radial-gradient(circle_at_top_right,var(--soft-pink),transparent)]">
-            <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <section id="hero" className="relative min-h-[90vh] pt-32 pb-20 overflow-hidden bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.1),transparent),radial-gradient(circle_at_bottom_left,rgba(244,114,182,0.1),transparent)]">
+            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-wood.png')] opacity-10 pointer-events-none"></div>
+            <div className="max-w-7xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center">
 
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
+                    variants={container}
+                    initial="hidden"
+                    animate="visible"
+                    className="text-center md:text-left"
                 >
                     <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-                        প্রতিটি কামড়ে <br />
-                        <span className="text-brand-warm italic">ভালোবাসার</span> স্বাদ
+                        <motion.div variants={container} initial="hidden" animate="visible" className="flex flex-wrap justify-center md:justify-start gap-x-2 md:gap-x-4">
+                            {words.map((word, index) => (
+                                <motion.span
+                                    variants={child}
+                                    key={index}
+                                    className="italic text-gradient-multi"
+                                >
+                                    {word}
+                                </motion.span>
+                            ))}
+                        </motion.div>
                     </h1>
-                    <p className="text-xl text-foreground/70 mb-8 max-w-lg">
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 1 }}
+                        className="text-xl text-foreground/70 mb-8 max-w-lg mx-auto md:mx-0"
+                    >
                         ফটিকছড়িতে ঘরোয়া পরিবেশে তৈরি ১০০% স্বাস্থ্যকর এবং সুস্বাদু কেক। আপনার বিশেষ মুহূর্তগুলোকে আরও স্মরণীয় করে তুলতে আমরা আছি আপনার পাশে।
-                    </p>
+                    </motion.p>
 
-                    <div className="flex flex-wrap gap-4">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.2 }}
+                        className="flex flex-wrap justify-center md:justify-start gap-4"
+                    >
                         <motion.a
                             href="#contact"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-brand-warm text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-brand-warm/20"
+                            className="bg-brand-green text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-brand-green/20"
                         >
                             এখনই অর্ডার দিন
                         </motion.a>
                         <motion.a
                             href="#gallery"
                             whileHover={{ scale: 1.05 }}
-                            className="px-8 py-4 border-2 border-brand-warm text-brand-warm rounded-xl font-bold text-lg"
+                            className="px-8 py-4 border-2 border-brand-green text-brand-green rounded-xl font-bold text-lg"
                         >
                             গ্যালারি দেখুন
                         </motion.a>
-                    </div>
+                    </motion.div>
                 </motion.div>
 
                 <motion.div

@@ -24,7 +24,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="bn">
+    <html lang="bn" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${hindSiliguri.variable} font-bn antialiased`}
       >

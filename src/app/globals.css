@@ -1,14 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fffdfa; /* Soft Cream */
-  --foreground: #2d1810; /* Deep Chocolate */
-  
+  --background: #1a0f0e;
+  /* Deep Dark Chocolate */
+  --foreground: #fffdfa;
+  /* Soft Cream */
+
   /* Brand Colors */
-  --soft-pink: #fce4ec;
-  --warm-pink: #f06292;
-  --gold: #d4af37;
-  --accent: #f8bbd0;
+  --soft-pink: #2d1b19;
+  /* Darker Pinkish Chocolate */
+  --warm-pink: #f472b6;
+  /* Vibrant Pink */
+  --gold: #fbbf24;
+  /* Brighter Gold */
+  --accent: #064e3b;
+  /* Dark Forest Green */
+  --brand-green: #10b981;
+  /* Primary Green */
+  --logo-deep: #fffdfa;
+  /* White Logo on Dark */
 }
 
 @theme inline {
@@ -16,20 +26,42 @@
   --color-foreground: var(--foreground);
   --color-brand-pink: var(--soft-pink);
   --color-brand-warm: var(--warm-pink);
+  --color-brand-green: var(--brand-green);
   --color-brand-gold: var(--gold);
   --color-brand-accent: var(--accent);
-  
+  --color-logo-deep: var(--logo-deep);
+
   --font-bn: var(--font-hind-siliguri), var(--font-geist-sans), sans-serif;
+}
+
+@utility text-gradient-multi {
+  background: linear-gradient(to right, #f472b6, #10b981, #fbbf24, #f472b6);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+  display: inline-block;
+  padding-right: 0.1em;
+  /* Fix for italic clipping */
+  margin-right: -0.1em;
+}
+
+@keyframes shine {
+  to {
+    background-position: 300% center;
+  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-bn);
+  min-height: 100vh;
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }

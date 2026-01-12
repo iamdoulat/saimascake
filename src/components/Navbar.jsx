@@ -9,7 +9,7 @@ export default function Navbar() {
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    className="text-2xl font-bold bg-gradient-to-r from-brand-warm to-brand-gold bg-clip-text text-transparent italic"
+                    className="text-2xl md:text-3xl font-extrabold italic drop-shadow-sm text-gradient-multi"
                 >
                     সাইমাস বেকড হোম
                 </motion.div>
@@ -24,7 +24,7 @@ export default function Navbar() {
                 <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-brand-warm text-white px-6 py-2 rounded-full font-semibold shadow-lg shadow-brand-warm/30"
+                    className="bg-brand-green text-white px-6 py-2 rounded-full font-semibold shadow-lg shadow-brand-green/30"
                 >
                     অর্ডার করুন
                 </motion.button>
